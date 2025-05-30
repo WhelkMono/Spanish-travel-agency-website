@@ -1,14 +1,15 @@
 {
-  "name": "holattrip",
+  "name": "spanish-travel-agency-website",
   "version": "1.0.0",
-  "description": "Customized travel booking platform",
-  "main": "index.html",
+  "description": "Spanish travel agency website with OpenAI chatbot",
+  "main": "server.js",
   "scripts": {
-    "start": "live-server"
+    "start": "node server.js"
   },
   "dependencies": {
-    "live-server": "^1.2.2",
-    "openai": "^4.28.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   },
   "author": "",
   "license": "ISC"

@@ -9,6 +9,9 @@ const sendButton = document.getElementById('send-message');
 const openChatButton = document.getElementById('open-chat');
 const closeChatButton = document.getElementById('close-chat');
 
+// API 엔드포인트 설정
+const API_URL = window.location.origin + '/api/chat';
+
 // 챗봇 UI 컨트롤
 openChatButton.addEventListener('click', () => {
     chatbot.style.display = 'flex';
@@ -48,28 +51,21 @@ async function sendMessage() {
 // OpenAI API 호출
 async function callOpenAI(message) {
     try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${config.OPENAI_API_KEY}`
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                model: "gpt-3.5-turbo",
-                messages: [{
-                    role: "system",
-                    content: "당신은 HolatTrip의 여행 상담 전문가입니다. 고객의 여행 관련 문의에 친절하고 전문적으로 답변해주세요."
-                }, {
-                    role: "user",
-                    content: message
-                }]
-            })
+            body: JSON.stringify({ message })
         });
 
         const data = await response.json();
+        if (data.error) {
+            throw new Error(data.error);
+        }
         return data.choices[0].message.content;
     } catch (error) {
-        console.error('OpenAI API Error:', error);
+        console.error('API Error:', error);
         throw error;
     }
 }
