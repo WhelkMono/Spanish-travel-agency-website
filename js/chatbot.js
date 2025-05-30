@@ -1,6 +1,3 @@
-// OpenAI API 설정
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Render 서버의 환경 변수 사용
-
 // DOM 요소
 const chatbot = document.getElementById('chatbot');
 const chatMessages = document.getElementById('chat-messages');

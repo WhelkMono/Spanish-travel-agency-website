@@ -140,13 +140,13 @@ body {
 /* 챗봇 스타일 */
 .chatbot-container {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     width: 350px;
     height: 500px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     display: none;
     flex-direction: column;
     z-index: 1000;
@@ -162,37 +162,81 @@ body {
     align-items: center;
 }
 
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .chat-messages {
-    flex-grow: 1;
+    flex: 1;
     padding: 15px;
     overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #e3f2fd;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: #f5f5f5;
 }
 
 .chat-input {
     padding: 15px;
     border-top: 1px solid #eee;
     display: flex;
+    gap: 10px;
 }
 
 .chat-input input {
-    flex-grow: 1;
+    flex: 1;
     padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 8px 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .chat-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 15px 30px;
+    padding: 15px 25px;
     background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.chat-button:hover {
+    background: var(--secondary-color);
 }
 
 /* 반응형 디자인 */
