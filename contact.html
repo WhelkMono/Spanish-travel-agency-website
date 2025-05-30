@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolatTrip - 문의하기</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HolatTrip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">여행지</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">패키지</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">항공+숙박</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">여행후기</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">회사소개</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 문의하기 헤더 -->
+    <section class="py-5 bg-light" style="margin-top: 80px;">
+        <div class="container">
+            <h1 class="text-center mb-4">문의하기</h1>
+            <p class="text-center text-muted mb-5">여행에 관한 모든 궁금증을 해결해드립니다</p>
+        </div>
+    </section>
+
+    <!-- 문의 폼 섹션 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-5">
+                            <form id="contactForm">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">이름</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">이메일</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="phone" class="form-label">연락처</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="subject" class="form-label">문의 유형</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">선택해주세요</option>
+                                        <option value="package">패키지 여행 문의</option>
+                                        <option value="booking">항공권/호텔 예약 문의</option>
+                                        <option value="cancel">예약 취소/변경 문의</option>
+                                        <option value="other">기타 문의</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">문의 내용</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="agreement" required>
+                                    <label class="form-check-label" for="agreement">
+                                        개인정보 수집 및 이용에 동의합니다
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3">문의하기</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 정보 섹션 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-telephone display-4 text-primary mb-3"></i>
+                            <h4>전화 문의</h4>
+                            <p class="mb-0">02-1234-5678</p>
+                            <p class="text-muted">평일 09:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-envelope display-4 text-primary mb-3"></i>
+                            <h4>이메일 문의</h4>
+                            <p class="mb-0">info@holattrip.com</p>
+                            <p class="text-muted">24시간 접수 가능</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-chat-dots display-4 text-primary mb-3"></i>
+                            <h4>카카오톡 문의</h4>
+                            <p class="mb-0">@holattrip</p>
+                            <p class="text-muted">평일 09:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 문의 폼 제출 처리
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('문의가 접수되었습니다. 빠른 시일 내에 답변 드리겠습니다.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

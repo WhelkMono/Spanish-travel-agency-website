@@ -17,26 +17,48 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">홈</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">홈</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">여행지</a></li>
                     <li class="nav-item"><a class="nav-link" href="package.html">패키지</a></li>
                     <li class="nav-item"><a class="nav-link" href="booking.html">항공+숙박</a></li>
                     <li class="nav-item"><a class="nav-link" href="reviews.html">여행후기</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">문의하기</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">회사소개</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">문의하기</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- 메인 히어로 섹션 -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>스페인 여행의 모든 것</h1>
-                <p class="lead mb-4">가우디의 바르셀로나부터 정열의 도시 세비야까지<br>스페인 전문 여행사 HolatTrip과 함께하세요</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="package.html" class="btn btn-primary btn-lg px-5 py-3">패키지 둘러보기</a>
-                    <a href="#recommended" class="btn btn-outline-light btn-lg px-5 py-3">인기 여행지</a>
+    <section id="home" class="hero position-relative">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/hero/barcelona-hero.jpg" class="d-block w-100" alt="바르셀로나">
                 </div>
+                <div class="carousel-item">
+                    <img src="images/hero/madrid-hero.jpg" class="d-block w-100" alt="마드리드">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hero/seville-hero.jpg" class="d-block w-100" alt="세비야">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hero/toledo-hero.jpg" class="d-block w-100" alt="톨레도">
+                </div>
+            </div>
+        </div>
+        <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1>스페인 여행의 모든 것</h1>
+            <p class="lead mb-4">가우디의 바르셀로나부터 정열의 도시 세비야까지<br>스페인 전문 여행사 HolatTrip과 함께하세요</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="package.html" class="btn btn-primary btn-lg px-5 py-3">패키지 둘러보기</a>
+                <a href="#recommended" class="btn btn-outline-light btn-lg px-5 py-3">인기 여행지</a>
             </div>
         </div>
     </section>
@@ -86,6 +108,9 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+                <a href="destinations.html" class="btn btn-primary btn-lg px-5">더 많은 여행지 보기</a>
+            </div>
         </div>
     </section>
 
@@ -98,9 +123,9 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="images/profiles/profile1.jpg" class="rounded-circle me-3" alt="프로필">
+                                <img src="images/profiles/profile5.jpg" class="rounded-circle me-3" alt="프로필" style="width: 60px; height: 60px; object-fit: cover;">
                                 <div>
-                                    <h6 class="mb-0">김은우</h6>
+                                    <h6 class="mb-0">박서연</h6>
                                     <small class="text-muted">바르셀로나 가우디 투어</small>
                                 </div>
                             </div>
@@ -115,9 +140,9 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="images/profiles/profile2.jpg" class="rounded-circle me-3" alt="프로필">
+                                <img src="images/profiles/profile6.jpg" class="rounded-circle me-3" alt="프로필" style="width: 60px; height: 60px; object-fit: cover;">
                                 <div>
-                                    <h6 class="mb-0">최재호</h6>
+                                    <h6 class="mb-0">이민준</h6>
                                     <small class="text-muted">마드리드 예술 투어</small>
                                 </div>
                             </div>
@@ -132,9 +157,9 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="images/profiles/profile3.jpg" class="rounded-circle me-3" alt="프로필">
+                                <img src="images/profiles/profile7.jpg" class="rounded-circle me-3" alt="프로필" style="width: 60px; height: 60px; object-fit: cover;">
                                 <div>
-                                    <h6 class="mb-0">김진성</h6>
+                                    <h6 class="mb-0">정하은</h6>
                                     <small class="text-muted">세비야 문화 체험</small>
                                 </div>
                             </div>
@@ -166,8 +191,23 @@
     </div>
     <button id="open-chat" class="chat-button">상담하기</button>
 
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Scripts -->
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
+
+    <!-- Carousel initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+                interval: 3000,
+                ride: true,
+                wrap: true
+            });
+        });
+    </script>
 </body>
 </html> 

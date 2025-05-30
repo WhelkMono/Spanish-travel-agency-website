@@ -16,24 +16,81 @@ body {
 /* 히어로 섹션 */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1920x1080?beach');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero .carousel,
+.hero .carousel-inner,
+.hero .carousel-item {
+    height: 100%;
+}
+
+.hero .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    z-index: 2;
+    width: 100%;
+    padding: 0 15px;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 3.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators {
+    margin-bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-size: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* 캐러셀 페이드 효과 */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
 }
 
 .hero .btn-primary {
@@ -241,8 +298,17 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero-content h1 {
         font-size: 2.5rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.2rem;
+    }
+    
+    .hero-content .btn {
+        padding: 0.5rem 1.5rem !important;
+        font-size: 1rem !important;
     }
     
     .chatbot-container {
