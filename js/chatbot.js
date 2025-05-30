@@ -1,5 +1,5 @@
 // OpenAI API 설정
-const OPENAI_API_KEY = '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'; // 실제 API 키로 교체 필요
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Render 서버의 환경 변수 사용
 
 // DOM 요소
 const chatbot = document.getElementById('chatbot');
@@ -52,7 +52,7 @@ async function callOpenAI(message) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENAI_API_KEY}`
+                'Authorization': `Bearer ${config.OPENAI_API_KEY}`
             },
             body: JSON.stringify({
                 model: "gpt-3.5-turbo",
