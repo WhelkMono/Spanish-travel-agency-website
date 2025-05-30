@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolatTrip - 항공+숙박 예약</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HolatTrip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">패키지</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">항공+숙박</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">여행후기</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 예약 헤더 섹션 -->
+    <section class="py-5 bg-light text-center" style="margin-top: 80px;">
+        <div class="container">
+            <h1 class="display-4 mb-4">항공권 & 호텔 예약</h1>
+            <p class="lead">스페인 여행의 시작, HolatTrip과 함께 준비하세요</p>
+        </div>
+    </section>
+
+    <!-- 예약 검색 섹션 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <ul class="nav nav-pills mb-4" id="bookingTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="flight-tab" data-bs-toggle="pill" data-bs-target="#flight" type="button">항공권</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="hotel-tab" data-bs-toggle="pill" data-bs-target="#hotel" type="button">호텔</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="package-tab" data-bs-toggle="pill" data-bs-target="#package" type="button">항공+호텔</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="bookingTabContent">
+                                <!-- 항공권 검색 -->
+                                <div class="tab-pane fade show active" id="flight" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label">출발지</label>
+                                                <select class="form-select">
+                                                    <option selected>인천국제공항</option>
+                                                    <option>김포국제공항</option>
+                                                    <option>김해국제공항</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">도착지</label>
+                                                <select class="form-select">
+                                                    <option selected>바르셀로나 엘프라트공항</option>
+                                                    <option>마드리드 바라하스공항</option>
+                                                    <option>세비야 공항</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">출발일</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">귀국일</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">인원</label>
+                                                <select class="form-select">
+                                                    <option selected>성인 1명</option>
+                                                    <option>성인 2명</option>
+                                                    <option>성인 3명</option>
+                                                    <option>성인 4명</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">좌석등급</label>
+                                                <select class="form-select">
+                                                    <option selected>일반석</option>
+                                                    <option>프리미엄 일반석</option>
+                                                    <option>비즈니스석</option>
+                                                    <option>일등석</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary w-100 py-3">항공권 검색</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- 호텔 검색 -->
+                                <div class="tab-pane fade" id="hotel" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-12">
+                                                <label class="form-label">목적지</label>
+                                                <select class="form-select">
+                                                    <option selected>바르셀로나</option>
+                                                    <option>마드리드</option>
+                                                    <option>세비야</option>
+                                                    <option>그라나다</option>
+                                                    <option>톨레도</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">체크인</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">체크아웃</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">객실 수</label>
+                                                <select class="form-select">
+                                                    <option selected>1개</option>
+                                                    <option>2개</option>
+                                                    <option>3개</option>
+                                                    <option>4개</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">인원</label>
+                                                <select class="form-select">
+                                                    <option selected>성인 2명</option>
+                                                    <option>성인 1명</option>
+                                                    <option>성인 3명</option>
+                                                    <option>성인 4명</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary w-100 py-3">호텔 검색</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- 항공+호텔 패키지 검색 -->
+                                <div class="tab-pane fade" id="package" role="tabpanel">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label">출발지</label>
+                                                <select class="form-select">
+                                                    <option selected>인천국제공항</option>
+                                                    <option>김포국제공항</option>
+                                                    <option>김해국제공항</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">목적지</label>
+                                                <select class="form-select">
+                                                    <option selected>바르셀로나</option>
+                                                    <option>마드리드</option>
+                                                    <option>세비야</option>
+                                                    <option>그라나다</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">출발일</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">귀국일</label>
+                                                <input type="text" class="form-control datepicker" placeholder="날짜 선택">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">인원</label>
+                                                <select class="form-select">
+                                                    <option selected>성인 2명</option>
+                                                    <option>성인 1명</option>
+                                                    <option>성인 3명</option>
+                                                    <option>성인 4명</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">호텔 등급</label>
+                                                <select class="form-select">
+                                                    <option selected>4성급</option>
+                                                    <option>3성급</option>
+                                                    <option>5성급</option>
+                                                    <option>전체</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary w-100 py-3">항공+호텔 검색</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 추천 호텔 섹션 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">추천 호텔</h2>
+            <div class="row">
+                <!-- 바르셀로나 호텔 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/hotels/barcelona-hotel.jpg" class="card-img-top" alt="바르셀로나 호텔">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Arts Barcelona</h5>
+                            <p class="card-text mb-2">바르셀로나</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <p class="card-text text-muted">
+                                해변가에 위치한 5성급 호텔로, 사그라다 파밀리아와 가까우며 지중해가 보이는 환상적인 전망을 자랑합니다.
+                            </p>
+                            <button class="btn btn-outline-primary">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 마드리드 호텔 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/hotels/madrid-hotel.jpg" class="card-img-top" alt="마드리드 호텔">
+                        <div class="card-body">
+                            <h5 class="card-title">The Westin Palace Madrid</h5>
+                            <p class="card-text mb-2">마드리드</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <p class="card-text text-muted">
+                                프라도 미술관과 레티로 공원 근처에 위치한 역사적인 5성급 호텔입니다.
+                            </p>
+                            <button class="btn btn-outline-primary">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 세비야 호텔 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/hotels/seville-hotel.jpg" class="card-img-top" alt="세비야 호텔">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Alfonso XIII</h5>
+                            <p class="card-text mb-2">세비야</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <p class="card-text text-muted">
+                                세비야의 상징적인 5성급 호텔로, 알카사르 궁전과 세비야 대성당이 도보 거리에 있습니다.
+                            </p>
+                            <button class="btn btn-outline-primary">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 챗봇 -->
+    <div id="chatbot" class="chatbot-container">
+        <div class="chat-header">
+            <h3>여행 상담사</h3>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="메시지를 입력하세요...">
+            <button id="send-message">전송</button>
+        </div>
+    </div>
+    <button id="open-chat" class="chat-button">상담하기</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        // 달력 초기화
+        flatpickr(".datepicker", {
+            locale: "ko",
+            minDate: "today",
+            dateFormat: "Y-m-d",
+        });
+    </script>
+</body>
+</html> 

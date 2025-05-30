@@ -1,0 +1,15 @@
+{
+  "name": "holattrip",
+  "version": "1.0.0",
+  "description": "Customized travel booking platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "openai": "^4.28.0"
+  },
+  "author": "",
+  "license": "ISC"
+} 

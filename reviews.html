@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolatTrip - 여행 후기</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HolatTrip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">패키지</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">항공+숙박</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reviews.html">여행후기</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 여행 후기 헤더 섹션 -->
+    <section class="py-5 bg-light text-center" style="margin-top: 80px;">
+        <div class="container">
+            <h1 class="display-4 mb-4">스페인 여행 후기</h1>
+            <p class="lead">HolatTrip과 함께한 고객님들의 생생한 스페인 여행 이야기를 만나보세요</p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                <i class="bi bi-pencil-square"></i> 후기 작성하기
+            </button>
+        </div>
+    </section>
+
+    <!-- 여행 후기 상세 섹션 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- 바르셀로나 후기 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="images/profiles/profile1.jpg" class="rounded-circle me-3" alt="프로필">
+                                <div>
+                                    <h6 class="mb-0">김은우</h6>
+                                    <small class="text-muted">바르셀로나 가우디 투어</small>
+                                </div>
+                            </div>
+                            <div id="carouselBarcelona" class="carousel slide mb-3" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/destinations/barcelona2.jpg" class="d-block w-100 rounded" alt="바르셀로나 여행">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/destinations/barcelona3.jpg" class="d-block w-100 rounded" alt="사그라다 파밀리아">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselBarcelona" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselBarcelona" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <p class="card-text">"사그라다 파밀리아의 웅장함에 완전 감동했어요! 가우디의 건축물들을 가이드님의 전문적인 설명과 함께 들으니 더욱 의미있는 여행이 되었습니다. 구엘공원의 석양도 정말 환상적이었어요!"</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <small class="text-muted">2024년 2월 방문</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 마드리드 후기 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="images/profiles/profile2.jpg" class="rounded-circle me-3" alt="프로필">
+                                <div>
+                                    <h6 class="mb-0">최재호</h6>
+                                    <small class="text-muted">마드리드 예술 투어</small>
+                                </div>
+                            </div>
+                            <img src="images/destinations/madrid.jpg" class="img-fluid rounded mb-3" alt="마드리드 여행">
+                            <p class="card-text">"프라도 미술관의 명작들을 실제로 보니 감동이었습니다. 레이나 소피아에서 본 게르니카는 정말 압도적이었어요. 현지 가이드님이 추천해주신 타파스 바도 최고였습니다!"</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <small class="text-muted">2024년 1월 방문</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 세비야 후기 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="images/profiles/profile3.jpg" class="rounded-circle me-3" alt="프로필">
+                                <div>
+                                    <h6 class="mb-0">김진성</h6>
+                                    <small class="text-muted">세비야 문화 체험</small>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <img src="images/destinations/seville2.jpg" class="img-fluid rounded" alt="세비야 여행">
+                                </div>
+                                <div class="col-6">
+                                    <img src="images/destinations/flamenco.jpg" class="img-fluid rounded" alt="플라멩고 공연">
+                                </div>
+                            </div>
+                            <p class="card-text">"세비야에서 본 플라멩고 공연은 평생 잊지 못할 것 같아요! 알카사르 궁전의 아름다움도 너무 인상적이었고, 현지 레스토랑에서 먹은 빠에야의 맛도 아직도 생생합니다."</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <small class="text-muted">2024년 3월 방문</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 톨레도 후기 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="images/profiles/profile4.jpg" class="rounded-circle me-3" alt="프로필">
+                                <div>
+                                    <h6 class="mb-0">이준수</h6>
+                                    <small class="text-muted">톨레도 당일 투어</small>
+                                </div>
+                            </div>
+                            <img src="images/destinations/toledo.jpg" class="img-fluid rounded mb-3" alt="톨레도 여행">
+                            <p class="card-text">"중세 시대로 시간 여행을 한 것 같았어요! 톨레도 대성당의 웅장함과 엘 그레코의 작품들, 좁은 골목길들의 운치있는 분위기가 정말 인상적이었습니다. 전통 대마스쿠스 검 공방 투어도 특별한 경험이었어요."</p>
+                            <div class="text-warning mb-2">★★★★★</div>
+                            <small class="text-muted">2024년 2월 방문</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 후기 작성 모달 -->
+    <div class="modal fade" id="reviewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">여행 후기 작성</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label class="form-label">여행 상품</label>
+                            <select class="form-select" required>
+                                <option value="">선택해주세요</option>
+                                <option>바르셀로나 가우디 투어</option>
+                                <option>마드리드 예술 투어</option>
+                                <option>세비야 문화 체험</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">평점</label>
+                            <div class="rating">
+                                <input type="radio" name="rating" value="5" id="5"><label for="5">★</label>
+                                <input type="radio" name="rating" value="4" id="4"><label for="4">★</label>
+                                <input type="radio" name="rating" value="3" id="3"><label for="3">★</label>
+                                <input type="radio" name="rating" value="2" id="2"><label for="2">★</label>
+                                <input type="radio" name="rating" value="1" id="1"><label for="1">★</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">후기 내용</label>
+                            <textarea class="form-control" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">사진 첨부 (선택사항)</label>
+                            <input type="file" class="form-control" accept="image/*" multiple>
+                            <div class="form-text">
+                                최대 5장까지 첨부 가능합니다. (권장 크기: 1200x800px, 최대 3MB)
+                                <br>
+                                업로드된 이미지는 images/reviews/ 폴더에 저장됩니다.
+                            </div>
+                        </div>
+                        <div id="imagePreview" class="row g-2 mb-3">
+                            <!-- 이미지 미리보기가 여기에 표시됩니다 -->
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="submit" form="reviewForm" class="btn btn-primary">작성 완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI 챗봇 -->
+    <div id="chatbot" class="chatbot-container">
+        <div class="chat-header">
+            <h3>여행 상담사</h3>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="메시지를 입력하세요...">
+            <button id="send-message">전송</button>
+        </div>
+    </div>
+    <button id="open-chat" class="chat-button">상담하기</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html> 
