@@ -40,7 +40,7 @@ app.post('/api/chat', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;  // Render가 제공하는 PORT 환경변수를 우선 사용
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 }); 
